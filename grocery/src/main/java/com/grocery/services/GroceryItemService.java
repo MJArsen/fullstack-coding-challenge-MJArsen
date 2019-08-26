@@ -21,6 +21,10 @@ public class GroceryItemService {
 	public GroceryItem findById(Integer itemId) {
         return groceryItemRepo.getOne(itemId);
     }
+	
+	// public List<GroceryItem> findByListId(int listId) {
+	// 	return groceryItemRepo.findByListId(listId);
+	// }
 
 	public GroceryItem createGroceryItem(GroceryItem newItem) {
 		return groceryItemRepo.save(newItem);
@@ -30,5 +34,6 @@ public class GroceryItemService {
 		GroceryItem removable = groceryItemRepo.getOne(itemId);
 		groceryItemRepo.delete(removable);
 	}
+
 
 }

@@ -31,7 +31,12 @@ public class GroceryItemController {
 	@GetMapping("{itemId}")
     public GroceryItem findById(@PathVariable("itemId") int itemId) {
         return groceryItemService.findById(itemId);
-    }
+	}
+	
+	// @GetMapping("/list/{listId}")
+	// public List<GroceryItem> findByListId(@PathVariable("listId") int listId) {
+	// 	return groceryItemService.findByListId(listId);
+	// }
 
 	@PostMapping
 	public GroceryItem createGroceryItem(@RequestBody GroceryItem newItem) {
